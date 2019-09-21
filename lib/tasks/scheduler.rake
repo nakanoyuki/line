@@ -1,5 +1,5 @@
-# namespace :scheduler do
-# end
+namespace :scheduler do
+
 
 desc "This task is called by the Heroku scheduler add-on"
 task :update_feed => :environment do
@@ -58,4 +58,6 @@ task :update_feed => :environment do
     response = client.multicast(user_ids, message)
   end
   "OK"
+end
+
 end
