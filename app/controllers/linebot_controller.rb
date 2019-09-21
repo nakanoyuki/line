@@ -5,7 +5,7 @@ class LinebotController < ApplicationController
     require 'rexml/document'
   
     # callbackアクションのCSRFトークン認証を無効
-    # protect_from_forgery :except => [:callback]
+    protect_from_forgery :except => [:callback]
   
     def callback
       body = request.body.read
